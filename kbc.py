@@ -1,7 +1,7 @@
 # # Create a program capable of displaying questions to the user like KBC.
 # # Use List data type to store the questions and their correct answers.
 # # Display the final amount the person is taking home after playing the game.
-
+import random
 
 print("""Welcome to KBC \nAnswer the 10 questions and win \nHighest winning value is Rs 1,00,000 \n""")
 
@@ -62,6 +62,7 @@ questions_kbc = [
 def run_kbc(questions):
     score = 0
     prize = 1000
+    random.shuffle(questions)
     for question in questions:
         print(question["question"])
         for option in question["options"]:
